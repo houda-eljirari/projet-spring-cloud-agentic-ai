@@ -1,0 +1,33 @@
+
+  version: '3.8'
+
+  services:
+    keycloak:
+      image: quay.io/keycloak/keycloak:22.0.1
+      container_name: keycloak
+      environment:
+        KEYCLOAK_ADMIN: admin
+        KEYCLOAK_ADMIN_PASSWORD: admin
+      ports:
+        - "8080:8080"
+      command: start-dev
+
+    postgres-customer:
+      image: postgres:15
+      container_name: postgres-customer
+      environment:
+        POSTGRES_DB: customer_db
+        POSTGRES_USER: user
+        POSTGRES_PASSWORD: password
+      ports:
+        - "5432:5432"
+
+    postgres-ebank:
+      image: postgres:15
+      container_name: postgres-ebank
+      environment:
+        POSTGRES_DB: ebank_db
+        POSTGRES_USER: user
+        POSTGRES_PASSWORD: password
+      ports:
+        - "5433:5432"

@@ -1,0 +1,39 @@
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+
+# Maven (Pour chaque microservice)
+**/target/
+*.jar
+*.war
+
+# Gradle (Si utilisé)
+**/.gradle/
+**/build/
+
+# Node & Angular
+**/node_modules/
+**/dist/
+**/.angular/
+
+# Logs & Temporary files
+*.log
+*.tmp
+
+# Environment variables & secrets
+.env
+application-secret.yml
+application-secret.properties
