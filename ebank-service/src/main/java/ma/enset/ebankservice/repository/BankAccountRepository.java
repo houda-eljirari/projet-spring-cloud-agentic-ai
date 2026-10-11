@@ -1,0 +1,7 @@
+package ma.enset.ebankservice.repository;
+
+import ma.enset.ebankservice.entities.BankAccount;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BankAccountRepository extends JpaRepository<BankAccount, String> {
+}
