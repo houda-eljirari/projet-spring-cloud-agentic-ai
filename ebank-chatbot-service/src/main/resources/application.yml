@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: ebank-chatbot-service
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2:3b
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN:votre_token_telegram_ici}
+    username: ${TELEGRAM_BOT_NAME:votre_bot_username_ici}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
